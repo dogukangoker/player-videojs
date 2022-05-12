@@ -6,6 +6,8 @@ function App() {
     controls: true,
     responsive: true,
     preload: "auto",
+    width: "536px",
+    height: "366px",
     poster:
       "https://imgrosetta.mynet.com.tr/file/13489604/13489604-1200x824.jpg",
     sources: [
