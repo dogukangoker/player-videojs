@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import VideoJS from "./components/VideoJS";
 
 function App() {
+  const options = {
+    autoplay: false,
+    controls: true,
+    responsive: true,
+    preload: "auto",
+    poster:
+      "https://imgrosetta.mynet.com.tr/file/13489604/13489604-1200x824.jpg",
+    sources: [
+      {
+        src: "//vjs.zencdn.net/v/oceans.mp4",
+        type: "video/mp4",
+      },
+    ],
+    tracks: [
+      {
+        src: "//vjs.zencdn.net/v/oceans.vtt",
+        kind: "captions",
+        label: "English",
+        default: true,
+      },
+    ],
+    controlBar: {
+      PictureInPictureToggle: false,
+    },
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <VideoJS options={options}></VideoJS>
     </div>
   );
 }
