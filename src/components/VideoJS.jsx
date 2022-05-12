@@ -24,7 +24,7 @@ const VideoJS = ({ options }) => {
   return (
     <video
       ref={videoRef}
-      className={`video-js vjs-big-play-centered vjs-theme-fantasy  `}
+      className={`video-js vjs-show-big-play-button-on-pause vjs-big-play-centered vjs-theme-fantasy  `}
       controls
     ></video>
   );
